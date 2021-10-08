@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Error from "./Error";
 import shortid from "shortid";
 
-export default function Formulario({agregarNuevoGasto  }) {
+export default function Formulario({guardarGasto, guardarCrearGasto  }) {
   // state de gastos
   const [nombre, guardarNombre] = useState("");
   const [cantidad, guardarCantidad] = useState();
@@ -28,7 +28,8 @@ export default function Formulario({agregarNuevoGasto  }) {
     }
 
     // pasar el gasto al componente principal
-      agregarNuevoGasto(gasto);
+    guardarGasto(gasto);
+    guardarCrearGasto(true)
 
     // resetear el form
       guardarNombre('');
