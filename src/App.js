@@ -4,7 +4,6 @@ import Pregunta from './components/Pregunta';
 import Formulario from './components/Formulario';
 import Listado from './components/Listado';
 import ControlPresupuesto from './components/ControlPresupuesto';
-import Gasto from './components/Gasto';
 
 function App() {
   //Definir el State
@@ -32,7 +31,7 @@ function App() {
       // Resetear a false
       guardarCrearGasto(false);
     }
-  }, [gasto]);
+  }, [gasto, crearGasto,gastos,restante]);
 
   return (
     <div className="container" >
