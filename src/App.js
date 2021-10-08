@@ -1,9 +1,16 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Pregunta from './components/Pregunta';
 
 function App() {
   return (
-    <div >
-      <h1> Presupuesto</h1>
+    <div className="container" >
+      <header>
+        <h1> Gasto semanal </h1>
+        <div className="contenido-principal contenido">
+          <Pregunta />
+        </div>
+      </header>
     </div>
   );
 }
